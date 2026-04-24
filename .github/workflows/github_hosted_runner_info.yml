@@ -2,6 +2,10 @@ name: Integration Test PR
 on: 
   pull_request:
     types: [opened, synchronize, reopened]
+  workflow_dispatch:  # Add this line
+  push:
+    branches: [ main ]
+  # ... other triggers
 
 jobs:
   test-job:
